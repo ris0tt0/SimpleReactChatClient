@@ -1,0 +1,1 @@
+export const SET_MY_COUNTER = 'set my coutner';

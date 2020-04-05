@@ -4,13 +4,17 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Logger from 'js-logger';
+import { Provider } from 'react-redux';
+import store from './store';
+import { setMyCounter } from './actions';
 
 Logger.useDefaults();
-
+//set to 15
+store.dispatch(setMyCounter(0xf));
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}> <App /></Provider>
   </React.StrictMode>,
   document.getElementById('jonathan-r-gee')
 );
