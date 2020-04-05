@@ -1,17 +1,24 @@
 import { combineReducers } from "redux";
-import { SET_MY_COUNTER } from "../actions/actiontypes";
+import { UPDATE_CHAT_LOG } from "../actions/actiontypes";
 
-function myCounter(state=0,action){
+function name(state='#555555',action){
+	return state;
+}
+
+function chatlog(state=[],action){
+	
 	switch(action.type){
-		case SET_MY_COUNTER:
-			return action.payload;
+		case UPDATE_CHAT_LOG:
+			return [...state,action.payload];
 		default:
 			return state;
 	}
-};
+}
+
 
 const rootReducers = combineReducers({
-	myCounter,
+	chatlog,
+	name,
 })
 
 export default rootReducers;

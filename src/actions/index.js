@@ -1,3 +1,3 @@
-import { SET_MY_COUNTER } from "./actiontypes";
+import { UPDATE_CHAT_LOG } from "./actiontypes";
 
-export const setMyCounter = payload => ({type:SET_MY_COUNTER,payload});
+export const updateChatLog = payload => ({type:UPDATE_CHAT_LOG,payload});

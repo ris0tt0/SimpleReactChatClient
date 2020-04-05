@@ -6,11 +6,16 @@ import * as serviceWorker from './serviceWorker';
 import Logger from 'js-logger';
 import { Provider } from 'react-redux';
 import store from './store';
-import { setMyCounter } from './actions';
+import io from "socket.io-client";
+import { updateChatLog } from './actions';
 
 Logger.useDefaults();
-//set to 15
-store.dispatch(setMyCounter(0xf));
+
+const socket = io('http://localhost:3000/');
+
+// listen for server events and dispatch.
+socket.on('onchatlog', ({msg}) => store.dispatch(updateChatLog(msg)));
+
 
 ReactDOM.render(
   <React.StrictMode>
