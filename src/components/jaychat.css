@@ -1,0 +1,18 @@
+.jaychat-container{
+	border:  1px solid blue;
+	width:400px;
+	height:500px;
+	display: flex;
+	flex-direction: column;
+}
+
+.jaychat-log{
+	border: 1px solid brown;
+	height:300px;
+	flex :1;
+}
+
+.jaychat-container input{
+	border: 1px solid pink;
+	width:100%;
+}
