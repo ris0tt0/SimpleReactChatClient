@@ -9,10 +9,31 @@
 .jaychat-log{
 	border: 1px solid brown;
 	height:300px;
+	overflow-y: auto;
 	flex :1;
+	display: inline-flex;
+	flex-direction: column-reverse;
 }
 
 .jaychat-container input{
 	border: 1px solid pink;
 	width:100%;
+}
+
+.jaychatlogitem{
+	display: flex;
+	border: 1px solid black;
+}
+
+.jaychatlogitem div{
+	display: inline-block;
+	border: 1px solid green;
+	min-width:20px;
+}
+
+.jaychatlogitem p{
+	padding-left: 5px;
+	margin-left: 5px;
+	display: inline;
+	border: 1px solid indianred;
 }
