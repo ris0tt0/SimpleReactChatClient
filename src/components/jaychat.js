@@ -7,7 +7,6 @@ import Logger from 'js-logger';
 
 const JayChatLogItem = ({line,color}) => {
 
-	Logger.info(`jaychatlogitem: ${line} ${color}`)
 	return (
 		<div className='jaychatlogitem'>
 			<div style={{background:color}} />
@@ -26,6 +25,7 @@ function JayChat({chatLog,onLine}) {
 	};
 
 	const log = chatLog.map((rawline,index) =>{
+		//TODO: move out of components and put into selectors
 		const {color,copy} = parseLine(rawline);
 
 		return (

@@ -1,5 +1,4 @@
 .jaychat-container{
-	border:  1px solid blue;
 	width:400px;
 	height:500px;
 	display: flex;
@@ -7,7 +6,7 @@
 }
 
 .jaychat-log{
-	border: 1px solid brown;
+	background-color: #9fa2b2;
 	height:300px;
 	overflow-y: auto;
 	flex :1;
@@ -16,24 +15,25 @@
 }
 
 .jaychat-container input{
-	border: 1px solid pink;
-	width:100%;
+	margin: 5px;
 }
 
 .jaychatlogitem{
+	margin-left:5px;
+	margin-right: 5px;
+	margin-bottom: 5px;;
 	display: flex;
-	border: 1px solid black;
+	background-color: #e3e3f1;
 }
 
 .jaychatlogitem div{
 	display: inline-block;
-	border: 1px solid green;
 	min-width:20px;
 }
 
 .jaychatlogitem p{
+	margin: 1px;
 	padding-left: 5px;
 	margin-left: 5px;
 	display: inline;
-	border: 1px solid indianred;
 }
