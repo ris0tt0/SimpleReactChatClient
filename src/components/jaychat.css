@@ -14,7 +14,13 @@
 	flex-direction: column-reverse;
 }
 
-.jaychat-container input{
+.jaychat-control {
+	display: flex;
+}
+
+.jaychat-control input{
+	background-color: whitesmoke;
+	flex:1;
 	margin: 5px;
 }
 
@@ -28,12 +34,15 @@
 
 .jaychatlogitem div{
 	display: inline-block;
-	min-width:20px;
+	margin:2px;
+	min-width:18px;
 }
 
 .jaychatlogitem p{
 	margin: 1px;
-	padding-left: 5px;
-	margin-left: 5px;
 	display: inline;
+}
+
+.jaychat-color{
+	margin-top: 10px;
 }

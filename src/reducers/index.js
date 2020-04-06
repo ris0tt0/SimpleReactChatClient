@@ -1,8 +1,15 @@
 import { combineReducers } from "redux";
-import { UPDATE_CHAT_LOG } from "../actions/actiontypes";
+import { UPDATE_CHAT_LOG, SET_NAME } from "../actions/actiontypes";
+import Logger from "js-logger";
 
-function name(state='#555555',action){
-	return state;
+function name(state='#40b2bf',action){
+	
+	switch (action.type) {
+		case SET_NAME:
+			return action.payload;
+		default:
+			return state;
+	}
 }
 
 function chatlog(state=[],action){

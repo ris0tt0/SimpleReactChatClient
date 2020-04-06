@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { SliderPicker } from 'react-color'
 
 import './jaychat.css';
 import { parseLine } from '../util';
@@ -14,9 +15,10 @@ const JayChatLogItem = ({line,color}) => {
 		</div>
 	)
 }
-function JayChat({chatLog,onLine}) {
+function JayChat({chatLog,onLine,onAvatar,color}) {
 
 	const [line,setLine] = useState('');
+
 	const onKeyCode = e => {
 		if(e.keyCode === 13){
 			onLine(line);
@@ -38,7 +40,12 @@ function JayChat({chatLog,onLine}) {
 			<div className='jaychat-log'>
 				{log}
 			</div>
-			<input type='text' value={line} onChange={e=>setLine(e.target.value)} onKeyUp={onKeyCode} />
+			<div style={{background:color}} className='jaychat-control'>
+				<input type='text' value={line} onChange={e=>setLine(e.target.value)} onKeyUp={onKeyCode} />
+			</div>
+			<div className='jaychat-color'>
+				<SliderPicker color={color} onChange={({hex}) => onAvatar(hex)} />
+			</div>
 		</div>
 	)
 }
