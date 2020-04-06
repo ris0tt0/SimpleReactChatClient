@@ -6,15 +6,12 @@ import './jaychat.css';
 import { parseLine } from '../util';
 import Logger from 'js-logger';
 
-const JayChatLogItem = ({line,color}) => {
-
-	return (
-		<div className='jaychatlogitem'>
-			<div style={{background:color}} />
-			<p>{line}</p>
-		</div>
-	)
-}
+const JayChatLogItem = ({line,color}) => (
+	<div className='jaychatlogitem'>
+		<div style={{background:color}} />
+		<p>{line}</p>
+	</div>
+);
 function JayChat({chatLog,onLine,onAvatar,color}) {
 
 	const [line,setLine] = useState('');

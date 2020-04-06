@@ -11,7 +11,7 @@ import { updateChatLog } from './actions';
 
 Logger.useDefaults();
 
-const socket = io('http://localhost:3000/');
+const socket = io();
 
 // listen for server events and dispatch.
 socket.on('onchatlog', ({msg}) => store.dispatch(updateChatLog(msg)));

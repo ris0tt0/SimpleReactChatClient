@@ -17,12 +17,10 @@ const JayChatContainer = () => {
   return <JayChat color={color} onLine={online} chatLog={log} onAvatar={onColor} />
 }
 
-function App() {
-  return (
-    <div className="App">
-      <JayChatContainer />
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <JayChatContainer />
+  </div>
+);
 
 export default App;

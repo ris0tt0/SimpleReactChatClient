@@ -2,7 +2,7 @@ import { COMPLETE_MESSAGE, SENDING_MESSAGE, ERROR_MESSAGE } from "../actions/act
 import io from "socket.io-client";
 import Logger from "js-logger";
 
-const socket = io('http://localhost:3000/');
+const socket = io();
 
 export const sendingMessage = () => ({type:SENDING_MESSAGE});
 export const completeMessage = () => ({type:COMPLETE_MESSAGE});
