@@ -20,7 +20,7 @@ function JayChat({chatLog,onLine,onAvatar,color}) {
 	const [line,setLine] = useState('');
 
 	const onKeyCode = e => {
-		if(e.keyCode === 13){
+		if(e.keyCode === 13 && line.trim().length > 0){
 			onLine(line);
 			setLine('');
 		}
